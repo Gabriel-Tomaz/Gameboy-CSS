@@ -130,10 +130,16 @@
 .battery-indicator .battery-led {
   width: 10px;
   height: 10px;
-  background-color: #eF5350;
+  background-color: #BDBDBD;
   border-radius: 50%;
   margin-bottom: 5px;
   opacity: 0.8;
+}
+
+.battery-indicator .battery-led:hover {
+  background-color: #eF5350;
+  -webkit-box-shadow: 0px 0px 8px #f44336;
+          box-shadow: 0px 0px 8px #f44336;
 }
 
 .battery-indicator .battery-title {
@@ -184,5 +190,275 @@
 
 .frame-line:nth-child(2)::before {
   content: "";
+}
+
+.buttons {
+  width: 85%;
+  height: 200px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-directional {
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.directional {
+  width: 80px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 4px;
+}
+
+.directional button {
+  width: 35px;
+  height: 25px;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  outline: none;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), inset 0px 0px #757575;
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), inset 0px 0px #757575;
+}
+
+.directional button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.directional:nth-child(2) {
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.directional:nth-child(2) button {
+  width: 35px;
+  height: 25px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000;
+  outline: none;
+  z-index: 1;
+  -webkit-box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.5), inset 2px 0px #757575;
+          box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.5), inset 2px 0px #757575;
+}
+
+.directional:nth-child(2) button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.partition {
+  position: absolute;
+  width: 28px;
+  height: 25px;
+  background-color: #000;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.partition .circle {
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset  -1px 1px #BDBDBD;
+          box-shadow: inset  -1px 1px #BDBDBD;
+}
+
+.button-action {
+  width: 100px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.button-action button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ef5350;
+  outline: none;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px #ef9a9a;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px #ef9a9a;
+}
+
+.button-action button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.button-action p {
+  width: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #9575CD;
+}
+
+.button-menu {
+  width: 40%;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0 auto;
+}
+
+.button-menu button {
+  width: 40px;
+  height: 8.5px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  margin: 5px;
+  background-color: #BDBDBD;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px #EEEEEE;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px #EEEEEE;
+}
+
+.button-menu button:active {
+  -webkit-transform: scale(0.95) rotate(-25deg);
+          transform: scale(0.95) rotate(-25deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.button-menu p {
+  text-transform: uppercase;
+  font-size: 0.6em;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  margin-left: 12px;
+  color: #9575CD;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.speakers {
+  width: 6%;
+  height: 70px;
+  position: absolute;
+  right: 39%;
+  bottom: 12.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.speakers .speaker {
+  width: 6px;
+  border-radius: 5px;
+  height: 55px;
+  background-color: #BDBDBD;
+  -webkit-box-shadow: inset 2px 2px #9E9E9E;
+          box-shadow: inset 2px 2px #9E9E9E;
 }
 /*# sourceMappingURL=main.css.map */

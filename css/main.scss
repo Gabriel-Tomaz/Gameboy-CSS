@@ -3,7 +3,6 @@
     padding: 0;
     font-family: sans-serif;
 }
-
 .main{
     width: 100%;
     height: 100vh;
@@ -86,10 +85,15 @@
     .battery-led{
         width: 10px;
         height: 10px;
-        background-color: #eF5350;
+        background-color: #BDBDBD;
         border-radius: 50%;
         margin-bottom: 5px;
         opacity: 0.8;
+
+        &:hover{
+            background-color: #eF5350;
+            box-shadow: 0px 0px 8px #f44336;
+        }
     }
 
     .battery-title{
@@ -112,7 +116,7 @@
     width: 100%;
     height: 2px;
     background-color: #F06292;
-
+    
     &::before{
         content: "DONT MATRIX WITH STEREO SOUND";
         font-size: 0.48em;
@@ -130,5 +134,201 @@
 
     &::before{
         content: "";
+    }
+}
+
+//Espaço dos botõs.
+
+.buttons{
+    width: 85%;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//Botões direcionais.
+
+.button-directional{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.directional{
+    width: 80px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 4px;
+
+    button{
+        width: 35px;
+        height: 25px;
+        border: none;
+        border-radius: 4px;
+        background-color: black;
+        outline: none;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.5) ,inset 0px 0px #757575;
+    
+        &:active{
+            transform: scale(0.9);
+            box-shadow: none;
+        }
+    }
+}
+.directional:nth-child(2){
+    position: absolute;
+    transform: rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    button{
+        width: 35px;
+        height: 25px;
+        border: none;
+        border-radius: 4px;
+        background-color: #000;
+        outline: none;
+        z-index: 1;
+        box-shadow: 3px -3px 6px rgba(0,0,0,0.5) ,inset 2px 0px #757575;
+
+        &:active{
+            transform: scale(0.9);
+            box-shadow: none;
+        }
+    }
+}
+
+.partition{
+    position: absolute;
+    width: 28px;
+    height: 25px;
+    background-color: #000;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .circle{
+        background-color: rgba(0,0,0,1);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: inset  -1px 1px #BDBDBD;
+    }
+}
+
+//Botões de ação.
+
+.button-action{
+    width: 100px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotate(-25deg);
+
+
+    button{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ef5350;
+        outline: none;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5) ,inset 2px 2px #ef9a9a ;
+        
+        &:active{
+            box-shadow: none;
+            transform: scale(0.95);
+        }
+
+    }
+
+    p{
+        width: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #9575CD;
+    }
+}
+
+//Botões START/SELECT
+
+.button-menu{
+    width: 40%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-self:center;
+    margin: 0 auto;
+
+    button{
+        width: 40px;
+        height: 8.5px;
+        border:none;
+        outline: none;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        margin: 5px;
+        background-color: #BDBDBD;
+        transform: rotate(-25deg);
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5) ,inset 2px 2px #EEEEEE;
+
+        &:active{
+            transform: scale(0.95) rotate(-25deg);
+            box-shadow: none;
+        }
+    }
+
+    p{
+        text-transform: uppercase;
+        font-size: 0.6em;
+        transform: rotate(-25deg);
+        margin-left:12px;
+        color: #9575CD;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+    }
+}
+
+//Área das caixas de som
+
+.speakers{
+    width: 6%;
+    height: 70px;
+    position: absolute;
+    right: 39%;
+    bottom: 12.5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotate(-45deg);
+
+    .speaker{
+        width: 6px;
+        border-radius: 5px;
+        height: 55px;
+        background-color: #BDBDBD;
+        box-shadow: inset 2px 2px #9E9E9E;
     }
 }
